@@ -2,10 +2,10 @@
 import javax.swing.DefaultListModel;
 import javax.swing.JDialog;
 
-/*
- * @author Juan Manuel Herrera Ramírez.
+/**
+ * 
+ * @author Juan Manuel Herrera Ramírez
  * @version 1.0
- *
  */
 
 public class Apuesta extends javax.swing.JFrame {

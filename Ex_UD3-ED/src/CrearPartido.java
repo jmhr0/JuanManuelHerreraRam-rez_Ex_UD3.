@@ -1,7 +1,11 @@
 
 import java.awt.event.KeyEvent;
 
-
+/**
+ * 
+ * @author Juan Manuel Herrera Ramírez
+ * @version 1.0
+ */
 
 public class CrearPartido extends javax.swing.JFrame
 {
@@ -93,7 +97,7 @@ public class CrearPartido extends javax.swing.JFrame
         }
     }//GEN-LAST:accion_tPartidoKeyPresionada
 
-    
+    //metodo main para inicializar
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
