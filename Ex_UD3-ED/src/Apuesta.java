@@ -3,9 +3,9 @@ import javax.swing.DefaultListModel;
 import javax.swing.JDialog;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * @author Juan Manuel Herrera Ramírez.
+ * @version 1.0
+ *
  */
 
 public class Apuesta extends javax.swing.JFrame {
@@ -118,8 +118,9 @@ public class Apuesta extends javax.swing.JFrame {
         getContentPane().add(pQuiniela, java.awt.BorderLayout.SOUTH);
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
-
+    }// </editor-fold>//GEN-END: inicialización de los componentes
+    
+    
     private void bNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNuevoActionPerformed
         CrearPartido agregarpartido = new CrearPartido(this);
         agregarpartido.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
@@ -127,17 +128,17 @@ public class Apuesta extends javax.swing.JFrame {
         agregarpartido.setResizable(Boolean.FALSE);
         agregarpartido.setTitle("Agregar nuevo partido");
         agregarpartido.setVisible(Boolean.TRUE);
-    }//GEN-LAST:event_bNuevoActionPerformed
+    }//GEN-LAST:accion_bNuevoActionCompletada
 
     private void bEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEliminarActionPerformed
         borraPartido(listaQuiniela.getSelectedIndex());
-    }//GEN-LAST:event_bEliminarActionPerformed
+    }//GEN-LAST:accion_bEliminarActionCompletada
 
     private void bResetearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetearActionPerformed
         DefaultListModel modelovacio = new DefaultListModel();
         this.listaQuiniela.setModel(modelovacio);
         this.listaResultados.setModel(modelovacio);
-    }//GEN-LAST:event_bResetearActionPerformed
+    }//GEN-LAST:acción_bResetearActionCompletada
 
    
     public int cualquiera(int n1, int n2)
@@ -169,9 +170,9 @@ public class Apuesta extends javax.swing.JFrame {
         }
 
         this.listaResultados.setModel(modeloquinielaresuelta);
-    }//GEN-LAST:event_bRealizarActionPerformed
+    }//GEN-LAST:acción_bRealizarActionCompletada
 
-    
+    //Añade la funcionalidad de crear un nuevo partido con la entrada que escribamos
     public void partidoNuevo(String partido)
     {
         DefaultListModel modelonuevo = new DefaultListModel();
@@ -185,7 +186,7 @@ public class Apuesta extends javax.swing.JFrame {
         this.listaQuiniela.setModel(modelonuevo);
     }
     
-  
+    //Añade la funcionalidad de borrar partido para borrar la entrada seleccionada
     public void borraPartido(int indice)
     {
         DefaultListModel modelonuevoquiniela = new DefaultListModel();
@@ -211,7 +212,7 @@ public class Apuesta extends javax.swing.JFrame {
         this.listaResultados.setModel(modelonuevoresultados);
     }
     
-   
+    //Metodo main que inicializa el programa
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -236,7 +237,7 @@ public class Apuesta extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        /* Crea y muestra por pantalla el formulario  */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Apuesta().setVisible(true);
@@ -244,7 +245,7 @@ public class Apuesta extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Declaración de variables, no modificar
     private javax.swing.JButton bEliminar;
     private javax.swing.JButton bNuevo;
     private javax.swing.JButton bRealizar;
@@ -260,5 +261,5 @@ public class Apuesta extends javax.swing.JFrame {
     private javax.swing.JPanel pBotones;
     private javax.swing.JPanel pEtiquetaQuiniela;
     private javax.swing.JPanel pQuiniela;
-    // End of variables declaration//GEN-END:variables
+    // Fin de la declaración de variables
 }
