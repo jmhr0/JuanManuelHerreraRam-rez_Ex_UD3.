@@ -9,13 +9,13 @@ public class CrearPartido extends javax.swing.JFrame
     
     private Apuesta v;
     
-   
+   //funcion para crear el partido inicializando los componentes
     public CrearPartido()
     {
         initComponents();
     }
 
-   
+   //funcion para crear el partido en el formulario de apuestas
     public CrearPartido(Apuesta ventana)
     {
         initComponents();
@@ -68,7 +68,12 @@ public class CrearPartido extends javax.swing.JFrame
         getContentPane().add(pInformacion, java.awt.BorderLayout.CENTER);
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>//GEN-END:Inicializa componentes
+    
+    /**
+     * Funcion para añadir partido
+     * @param p partido nuevo que se creara en la ventana apuestas
+     */
 
     public void añadePartido(String p)
     {
@@ -79,14 +84,14 @@ public class CrearPartido extends javax.swing.JFrame
     
     private void bAgregarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAgregarPartidoActionPerformed
         añadePartido(tPartido.getText());
-    }//GEN-LAST:event_bAgregarPartidoActionPerformed
+    }//GEN-LAST:accion_bAgregarPartidoActionCompletada
 
     private void tPartidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tPartidoKeyPressed
         if( evt.getKeyCode() == KeyEvent.VK_ENTER )
         {
             añadePartido(tPartido.getText());
         }
-    }//GEN-LAST:event_tPartidoKeyPressed
+    }//GEN-LAST:accion_tPartidoKeyPresionada
 
     
     public static void main(String args[]) {
@@ -113,7 +118,7 @@ public class CrearPartido extends javax.swing.JFrame
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        /* Crea y muestra el formulario por pantalla */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CrearPartido().setVisible(true);
@@ -121,12 +126,12 @@ public class CrearPartido extends javax.swing.JFrame
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Declaración de variables, no modificar
     private javax.swing.JButton bAgregarPartido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel pFuncionalidad;
     private javax.swing.JPanel pInformacion;
     private javax.swing.JTextField tPartido;
-    // End of variables declaration//GEN-END:variables
+    // Fin de la declaración de variables
 }
